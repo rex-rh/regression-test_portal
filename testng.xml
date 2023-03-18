@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Reliance Health Test" thread-count="1" parallel="tests" verbose="100">
+    <listeners>
+        <listener class-name="Listeners.AllureReport"/>
+        <listener class-name="Listeners.ExtentReport"/>
+    </listeners>
+
+
+    <test name="CSAT Test">
+<!--        <parameter name="BrowserName" value="Headless"/>-->
+        <parameter name="BrowserName" value="Chrome"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="platform" value="mac"/>
+
+        <classes>
+            <class name="Portals.Customer_feeds_test"/>
+        </classes>
+    </test>
+
+    <!--test name="global_website on Remote chrome">
+        <parameter name="BrowserName" value="RemoteChrome" />
+        <parameter name="browserVersion" value="latest" />
+        <parameter name="platform" value="mac" />
+
+        <classes>
+            <class name="global_website"/>
+        </classes>
+    </test-->
+
+    <!--test name="global_website on Remote firefox">
+        <parameter name="BrowserName" value="RemoteFirefox" />
+        <parameter name="browserVersion" value="latest" />
+        <parameter name="platform" value="mac" />
+
+        <classes>
+            <class name="global_website"/>
+        </classes>
+    </test-->
+
+    <!--test name="global_website on Remote Edge">
+        <parameter name="BrowserName" value="RemoteEdge" />
+        <parameter name="browserVersion" value="latest" />
+        <parameter name="platform" value="mac" />
+
+        <classes>
+            <class name="global_website"/>
+        </classes>
+    </test-->
+
+</suite>
